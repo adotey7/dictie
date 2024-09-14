@@ -1,6 +1,7 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+import { Analytics } from "@vercel/analytics/react";
 
 import { Toaster } from "@/components/ui/sonner";
 import { Button } from "@/components/ui/button";
@@ -63,6 +64,7 @@ function App() {
   return (
     <>
       <main className="max-h-full w-full">
+        <Analytics />
         <Toaster richColors />
         <div className="container mx-auto h-full w-3/4">
           <h1 className="text-center mt-4 mb-9 text-4xl font-bold text-gray-700 lg:text-5xl">
